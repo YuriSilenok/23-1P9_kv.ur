@@ -5,3 +5,4 @@ print("Введите значение b:")
 b = int(input())
 print("Введите значение c:")
 c = int(input())
+d = b**2 - 4 * a * c
