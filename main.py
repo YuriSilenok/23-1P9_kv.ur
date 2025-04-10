@@ -1,7 +1,7 @@
 """Программа для вычисления квадратного уравнения"""
 print("Введите значение a:")
-a=int(input())
+a = int(input())
 print("Введите значение b:")
-b=int(input())
+b = int(input())
 print("Введите значение c:")
-c=int(input())
+c = int(input())
