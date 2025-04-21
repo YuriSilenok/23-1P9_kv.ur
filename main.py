@@ -17,7 +17,8 @@ def kv_ur(a, b, c):
     return count_k, d
 
 
-koef_1 = float(input("Введите значение a:"))
-koef_2 = float(input("Введите значение b:"))
-koef_3 = float(input("Введите значение c:"))
-print(kv_ur(koef_1, koef_2, koef_3))
+if __name__ == "__main__":
+    koef_1 = float(input("Введите значение a:"))
+    koef_2 = float(input("Введите значение b:"))
+    koef_3 = float(input("Введите значение c:"))
+    print(kv_ur(koef_1, koef_2, koef_3))
