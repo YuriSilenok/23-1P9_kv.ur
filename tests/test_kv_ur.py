@@ -46,3 +46,15 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
         self.assertEqual(otv[0], massage, "Неверная строка при выводе")
         self.assertEqual(otv[1], d, "Неправильное значение дискрименанта")
+
+    def test_a_is_0(self):
+        '''Линейное уравнение'''
+        a = 0
+        b = 2
+        c = 2
+        massage = "Линейное уравнение имеет 1 корень"
+        x = -1
+        otv = kv_ur(a, b, c)
+        self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
+        self.assertEqual(otv[0], massage, "Неверная строка при выводе")
+        self.assertEqual(otv[1], x, "Неправильное значение корня")
