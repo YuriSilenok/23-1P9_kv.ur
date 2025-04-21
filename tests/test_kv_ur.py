@@ -50,8 +50,8 @@ class TestStringMethods(unittest.TestCase):
     def test_a_is_0(self):
         '''Линейное уравнение'''
         a = 0
-        b = 1
-        c = 1
+        b = 2
+        c = 2
         massage = "Линейное уравнение имеет 1 корень"
         x = -1
         otv = kv_ur(a, b, c)
