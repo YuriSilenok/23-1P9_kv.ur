@@ -5,6 +5,10 @@ def kv_ur(a, b, c):
     """Функиця, которая возвращает кортеж"""
     d = b**2 - 4 * a * c
     if a == 0:
+        if b == 0 and c == 0:
+            massage = "Линейное уравнение, прямая совпадает с осью Оx"
+            x = "R"
+            return massage, x
         x = -c/b
         aisnull = "Линейное уравнение имеет 1 корень"
         return aisnull, x
