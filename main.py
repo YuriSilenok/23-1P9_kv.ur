@@ -7,6 +7,9 @@ def kv_ur(a, b, c):
         massage = "Линейное уравнение, прямая совпадает с осью Оx"
         x = "R"
         return massage, x
+    if a == 0 and b == 0:
+        count_k = "Линейное уравнение, прямая параллельная оси Ox"
+        return count_k, "Корней нет"
     if a == 0:
         x = -c/b
         aisnull = "Линейное уравнение имеет 1 корень"
