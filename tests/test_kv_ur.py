@@ -58,3 +58,13 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
         self.assertEqual(otv[0], massage, "Неверная строка при выводе")
         self.assertEqual(otv[1], x, "Неправильное значение корня")
+
+    def test_a_b_is_0(self):
+        """Уравнение прямой c"""
+        a = 0
+        b = 0
+        c = 5
+        message = "Линейное уравнение параллельна оси Ox и не имеет корней"
+        otv = kv_ur(a, b, c)
+        self.assertEqual(len(otv), 1, "Количество элементов не равно одному")
+        self.assertEqual(otv[0], message, "Неверная строка при выводе")
