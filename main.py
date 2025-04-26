@@ -22,7 +22,7 @@ def kv_ur(a, b, c):
         x = (-b) / (2*a)
         return count_k, d, x
     count_k = "Дискриминант меньше нуля, уравнение имеет комплексные корни"
-    return count_k, d
+    return count_k, d, 'Нет корней'
 
 
 if __name__ == "__main__":
