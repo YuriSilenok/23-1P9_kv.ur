@@ -43,12 +43,13 @@ class TestStringMethods(unittest.TestCase):
         massage = "Дискриминант меньше нуля, уравнение имеет комплексные корни"
         d = -3
         otv = kv_ur(a, b, c)
-        self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
+        self.assertEqual(len(otv), 3, "Количество элементов не равно трем")
         self.assertEqual(otv[0], massage, "Неверная строка при выводе")
         self.assertEqual(otv[1], d, "Неправильное значение дискрименанта")
+        self.assertEqual(otv[2], 'Нет корней', "Не верный ответ")
 
     def test_a_is_0(self):
-        '''Линейное уравнение'''
+        '''Прямая пересекает ось Ох'''
         a = 0
         b = 2
         c = 2
