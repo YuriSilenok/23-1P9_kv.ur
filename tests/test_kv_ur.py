@@ -40,7 +40,7 @@ class TestStringMethods(unittest.TestCase):
         a = 0
         b = 0
         c = 0
-        massage = "Прямая совпадает с осью x"
+        massage = "Линейное уравнение, прямая совпадает с осью Оx"
         x = "R"
         otv = kv_ur(a, b, c)
         self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
