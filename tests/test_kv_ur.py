@@ -1,6 +1,6 @@
 """Модуль для тестирования квадратного уравнения"""
 import unittest
-from main import kv_ur
+from logic import kv_ur
 
 
 class TestStringMethods(unittest.TestCase):
