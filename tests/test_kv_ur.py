@@ -35,18 +35,16 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(otv[1], d, "Неправильное значение дискрименанта")
         self.assertEqual(otv[2], x, "Неправильное значение корня")
 
-    def test_nul_a_b_c(self):
-        """Дискриминант равняется нуля"""
+    def test_same_with_x(self):
+        """Прямая совпадает с осью x"""
         a = 0
         b = 0
         c = 0
-        massage = "Дискриминант равен нулю, уравнение имеет один корень"
-        d = 0
-        x = 0
+        massage = "Любое значение оси x"
+        x = "R"
         otv = kv_ur(a, b, c)
         self.assertEqual(len(otv), 3, "Количество элементов не равно трем")
         self.assertEqual(otv[0], massage, "Неверная строка при выводе")
-        self.assertEqual(otv[1], d, "Неправильное значение дискрименанта")
         self.assertEqual(otv[2], x, "Неправильное значение корня")
 
     def test_dis_mensh_null(self):
