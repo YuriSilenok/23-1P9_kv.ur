@@ -66,6 +66,6 @@ class TestStringMethods(unittest.TestCase):
         c = 5
         message = "Линейное уравнение, прямая параллельная оси Ox"
         otv = kv_ur(a, b, c)
-        self.assertEqual(len(otv), 1, "Количество элементов не равно одному")
+        self.assertEqual(len(otv), 2, "Количество элементов не равно двум")
         self.assertEqual(otv[0], message, "Неверная строка при выводе")
         self.assertEqual(otv[1], "Корней нет", "Неверная строка при выводе")
