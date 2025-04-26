@@ -23,12 +23,12 @@ class TestStringMethods(unittest.TestCase):
 
     def test_dis_rav_nul(self):
         """Дискриминант равняется нуля"""
-        a = 2
-        b = 4
-        c = 2
+        a = 0
+        b = 0
+        c = 0
         massage = "Дискриминант равен нулю, уравнение имеет один корень"
         d = 0
-        x = -1
+        x = 0
         otv = kv_ur(a, b, c)
         self.assertEqual(len(otv), 3, "Количество элементов не равно трем")
         self.assertEqual(otv[0], massage, "Неверная строка при выводе")
