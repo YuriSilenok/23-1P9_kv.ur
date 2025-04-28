@@ -1,6 +1,6 @@
 """FastAPI к квадратному уравнению"""
 from fastapi import FastAPI
-from main import kv_ur
+from logic import kv_ur
 
 app = FastAPI()
 
