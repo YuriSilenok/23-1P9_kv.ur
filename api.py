@@ -7,6 +7,7 @@ app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="public"))
 
+
 @app.get("/kv_ur")
 def kv_ur_get(a, b, c):
     """эндпоинт для нахождения корней квадратного уравнения"""
