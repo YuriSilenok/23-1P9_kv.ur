@@ -15,5 +15,35 @@
 
     <p class="output">Ответ: </p>
 
+    <script>
+        const aInput = document.getElementById('a');
+        const bInput = document.getElementById('b');
+        const cInput = document.getElementById('c');
+        const button = document.querySelector('button');
+        const result = document.querySelector('.output');
+    
+        button.addEventListener('click', () => {
+            const a = Number(aInput.value);
+            const b = Number(bInput.value);
+            const c = Number(cInput.value);
+            
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                result.textContent = 'Ошибка: введите числа во все поля';
+                return;
+            }
+            const D = b * b - 4 * a * c;
+    
+            if (D < 0) {
+                result.textContent = 'Нет действительных корней';
+            } else if (D === 0) {
+                const x = -b / (2 * a);
+                result.textContent = 'Один корень: x =' + x;
+            } else {
+                const x1 = (-b + Math.sqrt(D)) / (2 * a);
+                const x2 = (-b - Math.sqrt(D)) / (2 * a);
+                result.textContent = 'Два корня: x1 =' + x1 + ', x2 =' + x2;
+            }
+        });
+    </script>
 </body>
 </html>
