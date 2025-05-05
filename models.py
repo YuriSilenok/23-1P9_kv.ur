@@ -1,6 +1,6 @@
 """Создание модели через peewee"""
 
-from peewee import SqliteDatabase, Model, IntegerField
+from peewee import SqliteDatabase, Model, FloatField, CharField
 # pylint: disable=R0903
 
 db = SqliteDatabase('models.db')
@@ -15,9 +15,10 @@ class Table(Model):
 
 class Values(Table):
     """Класс для хранения значений коэффициентов"""
-    a = IntegerField()
-    b = IntegerField()
-    c = IntegerField()
+    a = FloatField()
+    b = FloatField()
+    c = FloatField()
+    result = CharField()
 
 
 if __name__ == '__main__':
