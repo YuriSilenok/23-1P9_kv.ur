@@ -1,6 +1,7 @@
 """Создание модели через peewee"""
 
 from peewee import SqliteDatabase, Model, IntegerField
+# pylint: disable=R0903
 
 db = SqliteDatabase('models.db')
 
