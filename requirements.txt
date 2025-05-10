@@ -3,3 +3,5 @@ pylint
 fastapi
 httpx
 peewee
+aiogram==3.*
+python-dotenv
