@@ -3,3 +3,4 @@ pylint
 fastapi
 httpx
 peewee
+aiogram==3.19.0
