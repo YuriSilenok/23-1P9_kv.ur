@@ -1,4 +1,4 @@
-"""Импорт нужных модулей"""
+"""Телеграм бота на основе модуля aiogram"""
 import asyncio
 import os
 from aiogram import Bot, Dispatcher
