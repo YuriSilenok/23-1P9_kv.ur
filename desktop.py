@@ -20,6 +20,8 @@ class Labichsl(tk.Tk):
     """Класс для разделения атрибутов"""
     def __init__(self):
         super().__init__()
+        self.lab_message = tk.Label(self, width=86, bg='gray')
+
         self.lab_1 = tk.Label(self, width=86, bg='gray')
 
         self.lab_2 = tk.Label(self, width=86, bg='gray')
@@ -49,8 +51,6 @@ class Kvurtkint(Labitext, Labichsl):
             self, width=85,
             text='Вычислить', bg='black', fg='white', command=self.vichisl
             )
-
-        self.lab_message = tk.Label(self, width=86, bg='gray')
 
         self.but.bind(self, '<Button-1>', self.vichisl)
 
