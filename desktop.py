@@ -3,7 +3,7 @@ import tkinter as tk
 from logic import kv_ur
 
 
-class Kvurtkint(tk.Tk): #disable=too-many-instance-attributes
+class Kvurtkint(tk.Tk):  # isable=too-many-instance-attributes
     """Класс для создания окна программы"""
     def __init__(self):
         super().__init__()
