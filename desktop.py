@@ -3,7 +3,31 @@ import tkinter as tk
 from logic import kv_ur
 
 
-class Kvurtkint(tk.Tk):  # isable=too-many-instance-attributes
+class Labitext(tk.Tk):
+    """Класс для разделения атрибутов"""
+    def __init__(self):
+        super().__init__()
+        self.lab_otv = tk.Label(self, width=85, text='Ваш ответ:')
+
+        self.lab_text_1 = tk.Label(self, width=85)
+
+        self.lab_text_2 = tk.Label(self, width=85)
+
+        self.lab_text_3 = tk.Label(self, width=85)
+
+
+class Labichsl(tk.Tk):
+    """Класс для разделения атрибутов"""
+    def __init__(self):
+        super().__init__()
+        self.lab_1 = tk.Label(self, width=86, bg='gray')
+
+        self.lab_2 = tk.Label(self, width=86, bg='gray')
+
+        self.lab_3 = tk.Label(self, width=86, bg='gray')
+
+
+class Kvurtkint(Labitext, Labichsl):
     """Класс для создания окна программы"""
     def __init__(self):
         super().__init__()
@@ -26,21 +50,7 @@ class Kvurtkint(tk.Tk):  # isable=too-many-instance-attributes
             text='Вычислить', bg='black', fg='white', command=self.vichisl
             )
 
-        self.lab_otv = tk.Label(self, width=85, text='Ваш ответ:')
-
-        self.lab_text_1 = tk.Label(self, width=85)
-
-        self.lab_text_2 = tk.Label(self, width=85)
-
-        self.lab_text_3 = tk.Label(self, width=85)
-
         self.lab_message = tk.Label(self, width=86, bg='gray')
-
-        self.lab_1 = tk.Label(self, width=86, bg='gray')
-
-        self.lab_2 = tk.Label(self, width=86, bg='gray')
-
-        self.lab_3 = tk.Label(self, width=86, bg='gray')
 
         self.but.bind(self, '<Button-1>', self.vichisl)
 
