@@ -38,7 +38,7 @@ class Labichsl(Labitext):
         self.lab_otv = tk.Label(
             self.f2, width=80, bg='white', text='Ваш ответ:'
             )
-        
+
         self.lab_message = tk.Label(self.f2, width=80, bg='gray')
 
         self.lab_1 = tk.Label(self.f2, width=80, bg='gray')
