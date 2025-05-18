@@ -7,64 +7,90 @@ class Labitext(tk.Tk):
     """Класс для разделения атрибутов"""
     def __init__(self):
         super().__init__()
-        self.lab_otv = tk.Label(self, width=85, text='Ваш ответ:')
+        self.f2 = tk.Frame(self, bg="white")
 
-        self.lab_text_1 = tk.Label(self, width=85)
+        self.f2.pack(side='bottom', anchor='s')
 
-        self.lab_text_2 = tk.Label(self, width=85)
+        self.f1 = tk.Frame(self, bg="white")
 
-        self.lab_text_3 = tk.Label(self, width=85)
+        self.f1.pack(side='top', anchor='n')
+
+        self.f3 = tk.Frame(self.f1, bg="white")
+
+        self.f3.pack(side='left', anchor='nw')
+
+        self.f4 = tk.Frame(self.f1, bg="white")
+
+        self.f4.pack(side='right', anchor='ne')
+
+        self.lab_otv = tk.Label(
+            self.f2, width=80, bg='white', text='Ваш ответ:'
+            )
+
+        self.lab_text_1 = tk.Label(self.f2, width=80, bg='white')
+
+        self.lab_text_2 = tk.Label(self.f2, width=80, bg='white')
+
+        self.lab_text_3 = tk.Label(self.f2, width=80, bg='white')
 
 
-class Labichsl(tk.Tk):
+class Labichsl(Labitext):
     """Класс для разделения атрибутов"""
     def __init__(self):
         super().__init__()
-        self.lab_message = tk.Label(self, width=86, bg='gray')
+        self.lab_message = tk.Label(self.f2, width=80, bg='gray')
 
-        self.lab_1 = tk.Label(self, width=86, bg='gray')
+        self.lab_1 = tk.Label(self.f2, width=80, bg='gray')
 
-        self.lab_2 = tk.Label(self, width=86, bg='gray')
+        self.lab_2 = tk.Label(self.f2, width=80, bg='gray')
 
-        self.lab_3 = tk.Label(self, width=86, bg='gray')
+        self.lab_3 = tk.Label(self.f2, width=80, bg='gray')
 
 
-class Kvurtkint(Labitext, Labichsl):
+class Kvurtkint(Labichsl):
     """Класс для создания окна программы"""
+
     def __init__(self):
         super().__init__()
+
         self.title("Решение квадратного уравнения")
 
-        self.lab_a = tk.Label(self, width=85, text='Введите значение a:')
+        self.lab_a = tk.Label(
+            self.f3, width=43, text='Введите значение a:', bg='white', height=1
+            )
 
-        self.lab_b = tk.Label(self, width=85, text='Введите значение b:')
+        self.lab_b = tk.Label(
+            self.f3, width=43, text='Введите значение b:', bg='white', height=1
+            )
 
-        self.lab_c = tk.Label(self, width=85, text='Введите значение c:')
+        self.lab_c = tk.Label(
+            self.f3, width=43, text='Введите значение c:', bg='white', height=1
+            )
 
-        self.ent_a = tk.Entry(self, width=100, bg='gray')
+        self.ent_a = tk.Entry(self.f4, width=43, bg='gray')
 
-        self.ent_b = tk.Entry(self, width=100, bg='gray')
+        self.ent_b = tk.Entry(self.f4, width=43, bg='gray')
 
-        self.ent_c = tk.Entry(self, width=100, bg='gray')
+        self.ent_c = tk.Entry(self.f4, width=43, bg='gray')
 
         self.but = tk.Button(
-            self, width=85,
+            self.f2, width=80,
             text='Вычислить', bg='black', fg='white', command=self.vichisl
             )
 
         self.but.bind(self, '<Button-1>', self.vichisl)
 
-        self.lab_a.pack()
+        self.ent_a.pack(expand='false', fill='none', anchor='ne', pady=2)
 
-        self.ent_a.pack()
+        self.lab_a.pack(expand='false', fill='none', anchor='nw', pady=1)
 
-        self.lab_b.pack()
+        self.lab_b.pack(expand='false', fill='none', anchor='w', pady=1)
 
-        self.ent_b.pack()
+        self.ent_b.pack(expand='false', fill='none', anchor='e', pady=2)
 
-        self.lab_c.pack()
+        self.lab_c.pack(expand='false', fill='none', anchor='sw', pady=1)
 
-        self.ent_c.pack()
+        self.ent_c.pack(expand='false', fill='none', anchor='se', pady=2)
 
         self.but.pack()
 
