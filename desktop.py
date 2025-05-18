@@ -23,10 +23,6 @@ class Labitext(tk.Tk):
 
         self.f4.pack(side='right', anchor='ne')
 
-        self.lab_otv = tk.Label(
-            self.f2, width=80, bg='white', text='Ваш ответ:'
-            )
-
         self.lab_text_1 = tk.Label(self.f2, width=80, bg='white')
 
         self.lab_text_2 = tk.Label(self.f2, width=80, bg='white')
@@ -38,6 +34,11 @@ class Labichsl(Labitext):
     """Класс для разделения атрибутов"""
     def __init__(self):
         super().__init__()
+
+        self.lab_otv = tk.Label(
+            self.f2, width=80, bg='white', text='Ваш ответ:'
+            )
+        
         self.lab_message = tk.Label(self.f2, width=80, bg='gray')
 
         self.lab_1 = tk.Label(self.f2, width=80, bg='gray')
